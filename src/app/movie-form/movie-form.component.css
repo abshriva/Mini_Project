@@ -1,0 +1,21 @@
+.form-control.ng-touched.ng-invalid {
+    border-left: 5px solid red;
+}
+
+.form-control.ng-touched.ng-valid {
+    border-left: 5px solid green;
+}
+
+.form-control.ng-pending {
+    border-left: 5px solid orange;
+}
+
+.btn-custom {
+    color: #fff;
+    background-color: #1fa67b;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+    color: #fff;
+}

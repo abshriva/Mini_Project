@@ -1,0 +1,37 @@
+  <div class="panel panel-success">
+    <div class="panel-heading">Movie List</div>
+</div>
+
+  <div class="table-resposive">
+    <table class="table table-filter">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Movie Name</th>
+        <th>Movie Rating</th>
+        <th>Release Date</th>
+        <th>Description</th> 
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr *ngFor="let movieList of moviedetail" [mRating]="movieList.rating"appBasicHighlightDirective>
+        <td>
+        <div class="media">
+        <a href="#" class="pull-left">
+        <img [src]="imageUrl" class="media-photo">
+        </a>
+        </div>
+        </td>
+        <td>{{movieList.name}}</td>
+        <!-- <td>{{movieList.rating}}</td> -->
+        <td>
+          <app-shared-star [starrating]="movieList.rating"></app-shared-star>
+        </td>
+        <td>{{movieList.releasedate | date :'MM/dd/yyyy'}}</td>
+        <td>{{movieList.description}}</td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+
